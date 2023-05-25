@@ -1,0 +1,26 @@
+# My shell setup
+
+# Add brew install location to system path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Enable vim mode for prompts
+set -o vi
+
+# Add alias
+alias ll="ls -la"
+
+#####Configure zsh history#####
+
+# The number of commands that are stored in the zsh history file
+# The max history size can be LONG_MAX from limits.h header file. That has a (really huge) value of 9223372036854775807
+export HISTFILESIZE=100000000
+# The number of commands that are loaded into memory from the history file
+export HISTSIZE=100000000
+export HISTFILE=~/.zsh_history
+
+# Prevent duplicated commands from showing when stepping through with up and down arrow keys
+setopt HIST_FIND_NO_DUPS
+# Allow history to be shared across open terminals live
+setopt SHARE_HISTORY
+
+###############################

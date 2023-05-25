@@ -1,0 +1,91 @@
+# Use tall and fullscreen layouts
+layouts:
+    - two-pane
+    - fullscreen
+
+# Add "command" to the default mods
+mod1: # Move focus within the same screen
+    - option
+mod2: # Swap windows within the same screen
+    - option
+    - command
+mod3: # Swap focused window to a different screen
+    - option
+    - shift
+    - command
+mod4:
+    - control
+    - option
+    - command
+
+# Modify the amethyst relaunch to use x and not z
+relaunch-amethyst:
+    mod: mod4
+    key: r
+
+cycle-layout:
+    mod: mod1
+    key: up
+
+cycle-layout-backward:
+    mod: mod1
+    key: right
+
+shrink-main:
+    mod: mod4
+    key: left
+
+expand-main:
+    mod: mod4
+    key: right
+
+focus-ccw:
+    mod: mod1
+    key: h
+
+focus-cw:
+    mod: mod1
+    key: l
+
+focus-main:
+    mod: mod1
+    key: m
+
+swap-ccw:
+    mod: mod2
+    key: h
+
+swap-cw:
+    mod: mod2
+    key: l
+
+swap-main:
+    mod: mod2
+    key: m
+
+swap-screen-ccw:
+    mod: mod3
+    key: h
+
+swap-screen-cw:
+    mod: mod3
+    key: l
+
+throw-space-left:
+    mod: mod4
+    key: o
+
+throw-space-right:
+    mod: mod4
+    key: p
+
+# Add 5px margin between windows
+window-margins: true
+window-margin-size: 5
+
+smart-window-margins: true
+
+float-small-windows: true
+
+mouse-follows-focus: false
+focus-follows-mouse: false
